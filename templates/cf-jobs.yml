@@ -135,7 +135,7 @@ jobs:
       networks: (( meta.networks.z1 ))
       syslog_aggregator: (( meta.syslog.z1 ))
       loggregator:
-        trafficcontroller: (( meta.loggregator.z1.trafficcontroller ))
+        trafficcontroller: 0.loggregator-trafficcontroller-z1.cf1.cf-prism.microbosh
 
   - name: api_z2
     template: cloud_controller_ng
@@ -149,7 +149,7 @@ jobs:
       networks: (( meta.networks.z2 ))
       syslog_aggregator: (( meta.syslog.z2 ))
       loggregator:
-        trafficcontroller: (( meta.loggregator.z2.trafficcontroller ))
+        trafficcontroller: 0.loggregator-trafficcontroller-z2.cf2.cf-prism.microbosh
 
   - name: hm_z1
     template: health_manager_next
@@ -176,7 +176,7 @@ jobs:
       networks: (( meta.networks.z1 ))
       syslog_aggregator: (( meta.syslog.z1 ))
       loggregator:
-        trafficcontroller: (( meta.loggregator.z1.trafficcontroller ))
+        trafficcontroller: 0.loggregator-trafficcontroller-z1.cf1.cf-prism.microbosh
 
   - name: runner_z2
     template:
@@ -193,7 +193,7 @@ jobs:
       networks: (( meta.networks.z2 ))
       syslog_aggregator: (( meta.syslog.z2 ))
       loggregator:
-        trafficcontroller: (( meta.loggregator.z2.trafficcontroller ))
+        trafficcontroller: 0.loggregator-trafficcontroller-z2.cf2.cf-prism.microbosh
 
   - name: taskmaster_z1
     template: narc
@@ -272,7 +272,7 @@ jobs:
       networks: (( meta.networks.z1 ))
       syslog_aggregator: (( meta.syslog.z1 ))
       loggregator:
-        trafficcontroller: (( meta.loggregator.z1.trafficcontroller ))
+        trafficcontroller: 0.loggregator-trafficcontroller-z1.cf1.cf-prism.microbosh
 
   - name: router_z2
     template: gorouter
@@ -285,7 +285,7 @@ jobs:
       networks: (( meta.networks.z2 ))
       syslog_aggregator: (( meta.syslog.z2 ))
       loggregator:
-        trafficcontroller: (( meta.loggregator.z2.trafficcontroller ))
+        trafficcontroller: 0.loggregator-trafficcontroller-z2.cf2.cf-prism.microbosh
 
 properties:
   domain: (( merge ))
